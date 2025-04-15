@@ -18,8 +18,9 @@
             android:id="@+id/addQuestionHead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Question"
             android:gravity="center"
+            android:inputType="textMultiLine"
+            android:text="Add Question"
             android:textSize="23sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,20 +36,21 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/addQuestionMAin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-           android:layout_width="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/addQuestion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Add Question"
-                android:layout_marginTop="10dp"
+                android:layout_height="80dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="2"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/add_question_et_bg"
+                android:gravity="top"
+                android:hint="Add Question"
+                android:maxLines="3"
                 android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -57,11 +59,11 @@
                 android:id="@+id/option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Option 1"
-                android:background="@drawable/add_question_et_bg"
-                android:padding="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_question_et_bg"
+                android:hint="Enter Option 1"
+                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/addQuestion" />
 
@@ -69,11 +71,11 @@
                 android:id="@+id/option2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Option 2"
-                android:background="@drawable/add_question_et_bg"
-                android:padding="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_question_et_bg"
+                android:hint="Enter Option 2"
+                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/option1" />
 
@@ -81,11 +83,11 @@
                 android:id="@+id/option3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Option 3"
-                android:background="@drawable/add_question_et_bg"
-                android:padding="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_question_et_bg"
+                android:hint="Enter Option 3"
+                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/option2" />
 
@@ -93,20 +95,20 @@
                 android:id="@+id/option4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Option 4"
-                android:background="@drawable/add_question_et_bg"
-                android:padding="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_question_et_bg"
+                android:hint="Enter Option 4"
+                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/option3" />
 
             <Button
                 android:id="@+id/submit"
-                android:text="Submit"
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Submit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/option4" />

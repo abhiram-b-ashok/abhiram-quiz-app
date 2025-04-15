@@ -11,6 +11,8 @@ import com.example.myquizapp.databinding.FragmentAddQuestionBinding
 
 class AddQuestionFragment : Fragment() {
    private lateinit var binding: FragmentAddQuestionBinding
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,6 +23,14 @@ class AddQuestionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+//        val questionDataBase = QuestionDataBase.getDatabase(requireContext())
+//        val newQuestion = Questions(1, "father of our nation?", "nehru", "patel", "bose", "gandhi")
+//        questionDataBase.questionsDao().addQuestion(newQuestion)
+
+
+
+
 
     }
 
