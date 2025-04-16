@@ -149,13 +149,43 @@
             app:layout_constraintTop_toBottomOf="@id/option3"
             tools:text="Its is like that" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/validateSelection"
+            android:gravity="center"
+            android:textColor="#F44336"
+            android:text="Select an Option"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/option4"
+            android:visibility="gone"/>
+
 
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/prevButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="Previos"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main" />
+
     <TextView
         android:id="@+id/nextButton"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:gravity="center"
@@ -165,7 +195,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prevButton"
         app:layout_constraintTop_toBottomOf="@+id/main" />
 
 

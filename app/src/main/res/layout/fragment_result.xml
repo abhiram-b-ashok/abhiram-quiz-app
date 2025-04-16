@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".playquiz.ResultFragment">
+
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/resultHead"
+        android:layout_height="wrap_content"
+        android:text="Quiz Results" />
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/selectedAnsL"
+        app:layout_constraintTop_toBottomOf="@+id/resultHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionNoL"
+        android:textColor="#9C27B0"
+        android:text="Q.No"
+        />
+    <TextView
+        app:layout_constraintStart_toEndOf="@+id/questionNoL"
+        app:layout_constraintEnd_toStartOf="@+id/correctAnsL"
+        app:layout_constraintTop_toBottomOf="@+id/resultHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#9C27B0"
+        android:id="@+id/selectedAnsL"
+        android:text="Selected Ans"
+        />
+    <TextView
+        app:layout_constraintStart_toEndOf="@+id/selectedAnsL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#9C27B0"
+        android:id="@+id/correctAnsL"
+        android:text="Correct Ans"
+        />
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:id="@+id/resultsRecycler"
+       android:orientation="vertical"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:listitem="@layout/recycler_result"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/selectedAnsL"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

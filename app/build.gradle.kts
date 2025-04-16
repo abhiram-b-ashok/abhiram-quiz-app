@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
    /* id("com.google.devtools.ksp")*/
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 
 }
 
@@ -63,5 +64,6 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation ("androidx.navigation:navigation-fragment-ktx:2.8.9")
     implementation ("androidx.navigation:navigation-ui-ktx:2.8.9")
+
 
 }

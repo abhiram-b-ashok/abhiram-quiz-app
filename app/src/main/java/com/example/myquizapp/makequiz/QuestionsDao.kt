@@ -9,10 +9,8 @@ import androidx.room.Update
 @Dao
 interface QuestionsDao {
 
-
     @Insert
-    fun addQuestions(questions: List<Questions>)
-
+    fun addQuestions(questions: Questions):Long
 
     @Query("SELECT * FROM QUESTIONS_TABLE")
     fun getALLQuestions(): List<Questions>

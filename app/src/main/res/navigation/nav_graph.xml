@@ -30,5 +30,17 @@
         android:id="@+id/quizFragment"
         android:name="com.example.myquizapp.playquiz.QuizFragment"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/quizToResult"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.myquizapp.playquiz.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument android:name="selection"
+            app:argType="string[]"/>
+    </fragment>
 </navigation>

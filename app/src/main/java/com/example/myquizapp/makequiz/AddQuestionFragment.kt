@@ -1,6 +1,7 @@
 package com.example.myquizapp.makequiz
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,11 +35,9 @@ class AddQuestionFragment : Fragment() {
             val option3 = binding.option3.text.toString()
             val option4 = binding.option4.text.toString()
             val correctAnswer = binding.correctAnswer.text.toString().toIntOrNull()
-
-
                 if (question.isBlank() || option1.isBlank() || option2.isBlank() || option3.isBlank() || option4.isBlank() || correctAnswer == null || correctAnswer !in 1..4
                 ) {
-                    Toast.makeText(requireContext(), "Please fill all fields correctly", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
 
@@ -50,7 +49,8 @@ class AddQuestionFragment : Fragment() {
                     option4 = option4,
                     answer = correctAnswer
                 )
-                dataBase.questionsDao().addQuestions(listOf(newQuestion))
+               val a = dataBase.questionsDao().addQuestions(newQuestion)
+            Log.d("TAG", "onViewCreated: $a")
                 Toast.makeText(requireContext(), "Question added successfully", Toast.LENGTH_SHORT).show()
 
             binding.addQuestion.text.clear()
