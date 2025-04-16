@@ -25,47 +25,57 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             option1.setOnClickListener{
-                option1.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
+                selectedOption(1)
             }
             option2.setOnClickListener{
-                option2.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
+                selectedOption(2)
             }
             option3.setOnClickListener{
-                option3.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
+                selectedOption(3)
             }
             option4.setOnClickListener{
-                option4.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
+                selectedOption(4)
             }
 
            nextButton.setOnClickListener{
-               if(selectedOption())
-               {
-                   findNavController()
-               }
+
             }
         }
 
     }
-   private fun selectedOption():Boolean{
+   private fun selectedOption(position: Int){
         binding.apply {
-            var selected = false
-            if(option1.isSelected)
+            if (position==1)
             {
-                selected = true
+                option1.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
             }
-            if(option2.isSelected)
+            else{
+                option1.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.round_adjust_24, 0)
+            }
+
+            if (position==2)
             {
-                selected = true
+                option2.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
             }
-            if(option3.isSelected)
+            else{
+                option2.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.round_adjust_24, 0)
+            }
+            if (position==3)
             {
-                selected = true
+                option3.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
             }
-            if(option4.isSelected)
+            else{
+                option3.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.round_adjust_24, 0)
+            }
+            if (position==4)
             {
-                selected = true
+                option4.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_check_circle_24, 0)
             }
-            return selected
+            else{
+                option4.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.round_adjust_24, 0)
+            }
+
+
 
         }
     }

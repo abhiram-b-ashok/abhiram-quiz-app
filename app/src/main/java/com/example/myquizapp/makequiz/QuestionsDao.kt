@@ -8,14 +8,11 @@ import androidx.room.Update
 
 @Dao
 interface QuestionsDao {
+
+
     @Insert
-    fun addQuestion(questions: Questions)
+    fun addQuestions(questions: List<Questions>)
 
-    @Delete
-    fun deleteQuestion(questions: Questions)
-
-    @Update
-    fun updateQuestion(questions: Questions)
 
     @Query("SELECT * FROM QUESTIONS_TABLE")
     fun getALLQuestions(): List<Questions>
