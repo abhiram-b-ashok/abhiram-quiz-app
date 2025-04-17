@@ -65,6 +65,8 @@ class QuizFragment : Fragment() {
                     binding.validateSelection.visibility = View.VISIBLE
                     return false
                 }
+                else
+                    binding.validateSelection.visibility = View.GONE
                 return true
             }
             nextButton.setOnClickListener {
@@ -99,8 +101,6 @@ class QuizFragment : Fragment() {
         }
 
     }
-
-
 
     private fun setData(list: List<Questions>) {
         binding.apply {

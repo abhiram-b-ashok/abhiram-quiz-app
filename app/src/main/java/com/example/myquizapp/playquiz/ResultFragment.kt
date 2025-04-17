@@ -13,7 +13,7 @@ import com.example.myquizapp.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {
     private lateinit var binding: FragmentResultBinding
-    private val myadapter: ResultsAdapter = ResultsAdapter()
+    private lateinit var  myadapter: ResultsAdapter
     private val args: ResultFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,11 +36,9 @@ class ResultFragment : Fragment() {
             ResultList(5, selectedAns[4], "Delhi"),
             )
 
-        binding.resultsRecycler.adapter = myadapter.apply {
-            resultList = selectedList
-            Log.d("@@listCheck", "$resultList ")
-            notifyDataSetChanged()
-        }
+        binding.resultsRecycler.adapter = myadapter
+        myadapter = ResultsAdapter(selectedList)
+
     }
 
 

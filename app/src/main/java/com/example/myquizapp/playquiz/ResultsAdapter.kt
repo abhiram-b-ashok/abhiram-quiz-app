@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myquizapp.databinding.RecyclerResultBinding
 
-class ResultsAdapter() :RecyclerView.Adapter<ResultsAdapter.ResultsViewHolder>()
+class ResultsAdapter( private val resultList: ArrayList<ResultList> ) :RecyclerView.Adapter<ResultsAdapter.ResultsViewHolder>()
 {
-     var resultList: ArrayList<ResultList> = arrayListOf()
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
